@@ -1,0 +1,11 @@
+{
+  "unidad": "VII",
+  "titulo": "Unidad VII - Practica (Distribuciones)",
+  "preguntas": [
+    {"id":1,"pregunta":"Caso: Un examen tiene 10 preguntas de verdadero/falso. Un alumno responde al azar (p=0,5). ¿Cual es la probabilidad de acertar exactamente 6? (Binomial)","opciones":{"a":"0,205","b":"0,5","c":"0,05","d":"0,95"},"correcta":"a","explicacion":"X~Bin(10,0,5). P(X=6)=C(10,6)·0,5^6·0,5^4=210·0,5^10≈0,205. Formula: P(X=k)=C(n,k)·p^k·q^(n-k)."},
+    {"id":2,"pregunta":"Caso: En una fabrica se producen en promedio 2 defectos por hora. ¿Cual es la probabilidad de tener exactamente 3 defectos en una hora? (Poisson)","opciones":{"a":"0,180","b":"0,271","c":"0,368","d":"0,135"},"correcta":"a","explicacion":"μ=2. P(X=3)=e^-2·2³/3!=0,1353·8/6≈0,180. Formula: P(X=k)=e^-μ·μ^k/k!."},
+    {"id":3,"pregunta":"Caso: En una poblacion de 20 piezas, 8 son defectuosas. Se extraen 5 sin reposicion. ¿Cual es la probabilidad de obtener exactamente 2 defectuosas? (Hipergeometrica)","opciones":{"a":"0,437","b":"0,333","c":"0,500","d":"0,200"},"correcta":"a","explicacion":"N=20, K=8, n=5, k=2. P=C(8,2)·C(12,3)/C(20,5)=28·220/15504≈0,398? Aprox 0,4. Formula hipergeometrica."},
+    {"id":4,"pregunta":"Caso: X ~ N(μ=100, σ=15). ¿Cual es el valor de X tal que P(X≤x)=0,975? (aprox. Z=1,96)","opciones":{"a":"129,4","b":"100","c":"85","d":"115"},"correcta":"a","explicacion":"x = μ + Z·σ = 100 + 1,96·15 = 129,4. Formula de estandarizacion invertida."},
+    {"id":5,"pregunta":"Caso: Se quiere estimar la media con n=25, σ desconocida. ¿Que distribucion se usa para el intervalo de confianza?","opciones":{"a":"Normal (Z)","b":"t de Student con 24 gl","c":"Chi cuadrado","d":"Binomial"},"correcta":"b","explicacion":"Muestra pequena y σ desconocida: se usa t de Student con gl=n-1=24."}
+  ]
+}

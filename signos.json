@@ -1,0 +1,39 @@
+{
+  "titulo": "Signos y simbolos utilizados",
+  "secciones": [
+    {
+      "unidad": "General",
+      "formulas": [
+        {"nombre":"N","formula":"N","uso":"Tamano de la poblacion."},
+        {"nombre":"n","formula":"n","uso":"Tamano de la muestra."},
+        {"nombre":"μ (mu)","formula":"\\mu","uso":"Media poblacional."},
+        {"nombre":"x̄ (x barra)","formula":"\\bar{x}","uso":"Media muestral."},
+        {"nombre":"σ (sigma)","formula":"\\sigma","uso":"Desvio estandar poblacional."},
+        {"nombre":"s","formula":"s","uso":"Desvio estandar muestral."},
+        {"nombre":"σ²","formula":"\\sigma^2","uso":"Varianza poblacional."},
+        {"nombre":"s²","formula":"s^2","uso":"Varianza muestral."},
+        {"nombre":"p","formula":"p","uso":"Proporcion poblacional / probabilidad de exito."},
+        {"nombre":"p̂ (p sombrero)","formula":"\\hat{p}","uso":"Proporcion muestral."},
+        {"nombre":"E(X)","formula":"E(X)","uso":"Esperanza matematica (media) de la variable X."},
+        {"nombre":"Var(X)","formula":"\\text{Var}(X)","uso":"Varianza de la variable X."},
+        {"nombre":"P(A)","formula":"P(A)","uso":"Probabilidad del suceso A."},
+        {"nombre":"P(A|B)","formula":"P(A|B)","uso":"Probabilidad condicional de A dado B."},
+        {"nombre":"P(A∩B)","formula":"P(A\\cap B)","uso":"Probabilidad de que ocurran A y B simultaneamente."},
+        {"nombre":"P(A∪B)","formula":"P(A\\cup B)","uso":"Probabilidad de que ocurra A o B."},
+        {"nombre":"f(x)","formula":"f(x)","uso":"Funcion de densidad de probabilidad."},
+        {"nombre":"F(x)","formula":"F(x)","uso":"Funcion de distribucion acumulada."},
+        {"nombre":"Z","formula":"Z","uso":"Variable normal estandarizada (puntaje Z)."},
+        {"nombre":"α (alfa)","formula":"\\alpha","uso":"Nivel de significacion."},
+        {"nombre":"β (beta)","formula":"\\beta","uso":"Probabilidad de error Tipo II."},
+        {"nombre":"χ² (chi cuadrado)","formula":"\\chi^2","uso":"Estadistico de prueba para varianza y bondad de ajuste."},
+        {"nombre":"t","formula":"t","uso":"Estadistico de la distribucion t de Student."},
+        {"nombre":"R²","formula":"R^2","uso":"Coeficiente de determinacion."},
+        {"nombre":"r","formula":"r","uso":"Coeficiente de correlacion lineal."},
+        {"nombre":"E","formula":"E","uso":"Margen de error."},
+        {"nombre":"n₀","formula":"n_0","uso":"Tamano de muestra inicial (antes de correccion)."},
+        {"nombre":"μ₀","formula":"\\mu_0","uso":"Valor hipotetico de la media bajo H₀."},
+        {"nombre":"σ₀","formula":"\\sigma_0","uso":"Valor hipotetico del desvio estandar bajo H₀."}
+      ]
+    }
+  ]
+}

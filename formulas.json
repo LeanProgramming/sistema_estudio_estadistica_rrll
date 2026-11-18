@@ -1,0 +1,101 @@
+{
+  "titulo": "Formulas por unidad",
+  "secciones": [
+    {
+      "unidad": "Unidad I - Introduccion",
+      "formulas": [
+        {"nombre":"Tamaño de muestra (poblacion infinita)","formula":"n = \\left(\\frac{Z_{\\alpha/2}\\cdot \\sigma}{E}\\right)^2","uso":"Calcular n para estimar una media con margen de error E."},
+        {"nombre":"Tamaño de muestra (poblacion finita)","formula":"n = \\frac{n_0}{1 + \\frac{n_0-1}{N}}","uso":"Ajuste del tamaño de muestra para poblacion finita N."},
+        {"nombre":"Elemento muestral (muestreo sistematico)","formula":"\\text{ELEMENTO}_i = \\text{ENTERO}[(N)\\cdot(x_{ai}) + 1]","uso":"Seleccionar elementos de la muestra con numeros aleatorios."}
+      ]
+    },
+    {
+      "unidad": "Unidad III - Analisis de una variable en el tiempo",
+      "formulas": [
+        {"nombre":"Modelo aditivo","formula":"Y = T + E + C + I","uso":"Suma de componentes de la serie."},
+        {"nombre":"Modelo multiplicativo","formula":"Y = T \\times E \\times C \\times I","uso":"Producto de componentes de la serie."},
+        {"nombre":"Media movil","formula":"\\bar{Y}_t = \\frac{Y_{t-1}+Y_t+Y_{t+1}}{3}","uso":"Suavizar la serie para identificar la tendencia."},
+        {"nombre":"Tendencia lineal","formula":"Y = a + bX","uso":"Estimar la tendencia por minimos cuadrados."},
+        {"nombre":"Indice estacional","formula":"I_e = \\frac{\\bar{Y}_{mes}}{\\bar{Y}}","uso":"Medir la variacion estacional respecto al promedio."},
+        {"nombre":"Error de pronostico","formula":"e_t = Y_t - \\hat{Y}_t","uso":"Diferencia entre valor real y pronosticado."}
+      ]
+    },
+    {
+      "unidad": "Unidad IV - Analisis de una variable en el tiempo (II)",
+      "formulas": [
+        {"nombre":"Modelo multiplicativo","formula":"Y = T \\times E \\times C \\times I","uso":"Producto de componentes de la serie."},
+        {"nombre":"Media movil centrada","formula":"\\bar{Y}_t = \\frac{Y_{t-2}+Y_{t-1}+Y_t+Y_{t+1}+Y_{t+2}}{5}","uso":"Suavizar series con estacionalidad par."},
+        {"nombre":"Autocorrelacion","formula":"r_k = \\frac{\\sum (Y_t-\\bar{Y})(Y_{t-k}-\\bar{Y})}{\\sum (Y_t-\\bar{Y})^2}","uso":"Correlacion de la serie consigo misma en rezago k."},
+        {"nombre":"Diferenciacion","formula":"\\Delta Y_t = Y_t - Y_{t-1}","uso":"Eliminar la tendencia para lograr estacionariedad."},
+        {"nombre":"MAPE","formula":"MAPE = \\frac{1}{n}\\sum \\left|\\frac{Y_t-\\hat{Y}_t}{Y_t}\\right|\\times 100","uso":"Error porcentual absoluto medio."}
+      ]
+    },
+    {
+      "unidad": "Unidad V - Numeros indices",
+      "formulas": [
+        {"nombre":"Indice simple","formula":"I = \\frac{P_1}{P_0}\\times 100","uso":"Comparar un precio actual con el base."},
+        {"nombre":"Indice agregativo simple","formula":"I = \\frac{\\sum P_1}{\\sum P_0}\\times 100","uso":"Indice no ponderado de precios."},
+        {"nombre":"Laspeyres","formula":"L = \\frac{\\sum P_1 Q_0}{\\sum P_0 Q_0}\\times 100","uso":"Indice ponderado con cantidades base."},
+        {"nombre":"Paasche","formula":"P = \\frac{\\sum P_1 Q_1}{\\sum P_0 Q_1}\\times 100","uso":"Indice ponderado con cantidades actuales."},
+        {"nombre":"Fisher","formula":"F = \\sqrt{L\\cdot P}","uso":"Media geometrica de Laspeyres y Paasche."},
+        {"nombre":"Variacion porcentual","formula":"\\%\\Delta = \\frac{I_1 - I_0}{I_0}\\times 100","uso":"Variacion porcentual entre dos periodos."},
+        {"nombre":"Poder adquisitivo","formula":"PA = \\frac{S}{I_p}","uso":"Salario nominal dividido por indice de precios."},
+        {"nombre":"Indice de valor","formula":"I_V = \\frac{I_P \\cdot I_Q}{100}","uso":"Producto de indices de precios y cantidad."}
+      ]
+    },
+    {
+      "unidad": "Unidad II - Analisis de dos variables",
+      "formulas": [
+        {"nombre":"Pendiente (minimos cuadrados)","formula":"b = \\frac{n\\sum xy - \\sum x\\sum y}{n\\sum x^2 - (\\sum x)^2}","uso":"Pendiente de la recta de regresion."},
+        {"nombre":"Intercepto","formula":"a = \\bar{Y} - b\\cdot \\bar{X}","uso":"Intercepto de la recta de regresion."},
+        {"nombre":"Coeficiente de correlacion","formula":"r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{(n\\sum x^2-(\\sum x)^2)(n\\sum y^2-(\\sum y)^2)}}","uso":"Mide la relacion lineal entre dos variables."},
+        {"nombre":"Coeficiente de determinacion","formula":"R^2 = r^2","uso":"Proporcion de variacion explicada por el modelo."}
+      ]
+    },
+    {
+      "unidad": "Unidad VI - Probabilidad",
+      "formulas": [
+        {"nombre":"Probabilidad condicional","formula":"P(A|B) = \\frac{P(A\\cap B)}{P(B)}","uso":"Probabilidad de A dado que ocurrio B."},
+        {"nombre":"Regla de la adicion","formula":"P(A\\cup B) = P(A)+P(B)-P(A\\cap B)","uso":"Probabilidad de que ocurra A o B."},
+        {"nombre":"Regla de la multiplicacion","formula":"P(A\\cap B) = P(A)\\cdot P(B|A)","uso":"Probabilidad conjunta de dos sucesos."},
+        {"nombre":"Esperanza matematica","formula":"E(X) = \\sum x_i\\cdot p_i","uso":"Valor esperado de una variable aleatoria discreta."},
+        {"nombre":"Varianza","formula":"\\text{Var}(X) = E(X^2) - [E(X)]^2","uso":"Dispersion de la variable respecto a su media."}
+      ]
+    },
+    {
+      "unidad": "Unidad VII - Distribuciones",
+      "formulas": [
+        {"nombre":"Binomial: P(X=k)","formula":"P(X=k)=\\binom{n}{k}\\cdot p^k\\cdot q^{n-k}","uso":"Probabilidad de k exitos en n ensayos."},
+        {"nombre":"Binomial: E y Var","formula":"E(X)=n\\cdot p \\; ; \\; \\text{Var}(X)=n\\cdot p\\cdot q","uso":"Media y varianza de la Binomial."},
+        {"nombre":"Poisson: P(X=k)","formula":"P(X=k)=e^{-\\mu}\\cdot \\frac{\\mu^k}{k!}","uso":"Probabilidad de k eventos en un intervalo."},
+        {"nombre":"Normal estandar","formula":"Z = \\frac{X-\\mu}{\\sigma}","uso":"Estandarizar una variable normal."},
+        {"nombre":"Hipergeometrica","formula":"P(X=k)=\\frac{\\binom{K}{k}\\binom{N-K}{n-k}}{\\binom{N}{n}}","uso":"Probabilidad en muestreo sin reposicion."}
+      ]
+    },
+    {
+      "unidad": "Unidad VIII - Muestras",
+      "formulas": [
+        {"nombre":"Error estandar (con reposicion)","formula":"\\sigma_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}}","uso":"Error estandar de la media muestral."},
+        {"nombre":"Error estandar (sin reposicion)","formula":"\\sigma_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}}\\cdot \\sqrt{\\frac{N-n}{N-1}}","uso":"Con factor de correccion por poblacion finita."},
+        {"nombre":"Error estandar de proporcion","formula":"\\sigma_{\\hat p} = \\sqrt{\\frac{p\\cdot q}{n}}","uso":"Error estandar de una proporcion muestral."}
+      ]
+    },
+    {
+      "unidad": "Unidad IX - Estimacion",
+      "formulas": [
+        {"nombre":"Intervalo de confianza para la media (σ conocida)","formula":"\\bar{x} \\pm Z_{\\alpha/2}\\cdot \\frac{\\sigma}{\\sqrt{n}}","uso":"Intervalo de confianza para la media poblacional."},
+        {"nombre":"Intervalo de confianza para la media (σ desconocida)","formula":"\\bar{x} \\pm t_{\\alpha/2}\\cdot \\frac{s}{\\sqrt{n}}","uso":"Para muestras pequenas con varianza desconocida."},
+        {"nombre":"Tamano de muestra (media)","formula":"n = \\left(\\frac{Z_{\\alpha/2}\\cdot \\sigma}{E}\\right)^2","uso":"Calcular n para estimar una media con margen E."}
+      ]
+    },
+    {
+      "unidad": "Unidad X - Decision",
+      "formulas": [
+        {"nombre":"Estadistico Z (media, σ conocida)","formula":"Z = \\frac{\\bar{x} - \\mu_0}{\\sigma/\\sqrt{n}}","uso":"Prueba de hipotesis para la media."},
+        {"nombre":"Estadistico t (media, σ desconocida)","formula":"t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}","uso":"Prueba de hipotesis para la media (muestra pequena)."},
+        {"nombre":"Estadistico Z (proporcion)","formula":"Z = \\frac{\\hat p - p_0}{\\sqrt{p_0\\cdot q_0/n}}","uso":"Prueba de hipotesis para una proporcion."},
+        {"nombre":"Estadistico Chi cuadrado (varianza)","formula":"\\chi^2 = \\frac{(n-1)s^2}{\\sigma_0^2}","uso":"Prueba de hipotesis para la varianza."}
+      ]
+    }
+  ]
+}

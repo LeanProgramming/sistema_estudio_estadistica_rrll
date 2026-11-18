@@ -1,0 +1,27 @@
+body{font-family:Arial,sans-serif;max-width:800px;margin:40px auto;padding:0 20px;background:#f5f5f5}
+h1{color:#333}
+.menu{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+.menu button{padding:12px 20px;font-size:16px;cursor:pointer;background:#4CAF50;color:#fff;border:none;border-radius:8px}
+.menu button:hover{background:#45a049}
+.card{background:#fff;padding:25px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.q{font-size:18px;margin-bottom:20px;font-weight:bold}
+.opts button{display:block;width:100%;text-align:left;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer;font-size:15px}
+.opts button:hover{background:#eef}
+.opts button.correct{background:#d4edda;border-color:#28a745}
+.opts button.wrong{background:#f8d7da;border-color:#dc3545}
+.exp{margin-top:15px;padding:12px;border-radius:6px;background:#fff3cd}
+.formula{font-family:"Cambria Math","Times New Roman",serif;font-size:18px;text-align:center;background:#f0f4ff;padding:10px 12px;margin:8px 0;border-radius:6px;border:1px solid #d0d8ff;color:#1a237e;letter-spacing:.5px}
+.back{margin-top:20px;background:#6c757d;color:#fff;border:none;padding:10px 16px;border-radius:6px;cursor:pointer}
+.next{margin-top:10px;background:#007bff;color:#fff;border:none;padding:10px 16px;border-radius:6px;cursor:pointer}
+
+/* Responsive */
+@media (max-width: 600px){
+  body{margin:20px auto;padding:0 12px}
+  h1{font-size:20px}
+  .menu button{padding:10px 14px;font-size:14px;flex:1 1 100%}
+  .card{padding:16px}
+  .q{font-size:16px}
+  .opts button{font-size:14px;padding:10px}
+  .exp{font-size:14px}
+  .back,.next{padding:10px 12px;font-size:14px;flex:1}
+}

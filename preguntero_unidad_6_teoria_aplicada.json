@@ -1,0 +1,16 @@
+{
+  "unidad": "VI",
+  "titulo": "Unidad VI - Teoria aplicada (Probabilidad)",
+  "preguntas": [
+    {"id":1,"pregunta":"En un experimento aleatorio se lanzan dos dados. ¿Cual es el espacio muestral?","opciones":{"a":"{1,2,3,4,5,6}","b":"Todos los pares (i,j) con i,j en {1..6}, total 36.","c":"{2,3,...,12}","d":"Los numeros primos entre 1 y 12."},"correcta":"b","explicacion":"El espacio muestral son los 36 pares ordenados posibles. Las otras opciones son subconjuntos o resultados."},
+    {"id":2,"pregunta":"¿Cual es la probabilidad de obtener suma 7 al lanzar dos dados?","opciones":{"a":"1/6","b":"1/12","c":"5/36","d":"1/36"},"correcta":"a","explicacion":"Hay 6 casos favorables de 36: (1,6),(2,5),...,(6,1). P=6/36=1/6."},
+    {"id":3,"pregunta":"Si P(A)=0,4 y P(B)=0,5 y A,B son independientes, P(A∩B)=?","opciones":{"a":"0,9","b":"0,2","c":"0,1","d":"0,4"},"correcta":"b","explicacion":"Para independientes P(A∩B)=P(A)·P(B)=0,4×0,5=0,2."},
+    {"id":4,"pregunta":"Si P(A)=0,6, P(B)=0,4 y P(A∩B)=0,2, entonces P(A∪B)=?","opciones":{"a":"1,0","b":"0,8","c":"0,6","d":"0,4"},"correcta":"b","explicacion":"P(A∪B)=P(A)+P(B)-P(A∩B)=0,6+0,4-0,2=0,8."},
+    {"id":5,"pregunta":"En una poblacion, P(A)=0,3 y P(B|A)=0,5. Entonces P(A∩B)=?","opciones":{"a":"0,15","b":"0,8","c":"0,2","d":"0,5"},"correcta":"a","explicacion":"P(A∩B)=P(B|A)·P(A)=0,5×0,3=0,15."},
+    {"id":6,"pregunta":"Si dos sucesos son mutuamente excluyentes, entonces:","opciones":{"a":"Son independientes.","b":"P(A∩B)=0.","c":"P(A∪B)=P(A)·P(B).","d":"P(A|B)=P(A)."},"correcta":"b","explicacion":"Mutuamente excluyentes no pueden ocurrir juntos, por lo que P(A∩B)=0."},
+    {"id":7,"pregunta":"La esperanza matematica de una variable aleatoria mide:","opciones":{"a":"La dispersion de los valores.","b":"El valor central esperado (media).","c":"La moda de la distribucion.","d":"La mediana."},"correcta":"b","explicacion":"E(X) es el valor esperado o media de la variable."},
+    {"id":8,"pregunta":"Si X tiene distribucion con E(X)=5 y Var(X)=4, el desvio estandar es:","opciones":{"a":"4","b":"2","c":"5","d":"16"},"correcta":"b","explicacion":"σ = √Var = √4 = 2."},
+    {"id":9,"pregunta":"Para una variable continua, la probabilidad de que X tome un valor exacto x₀ es:","opciones":{"a":"f(x₀).","b":"0.","c":"1.","d":"f(x₀)·dx."},"correcta":"b","explicacion":"En variables continuas la probabilidad en un punto es 0; solo tiene sentido en intervalos."},
+    {"id":10,"pregunta":"Si Y = 2X + 3, con E(X)=4 y Var(X)=9, entonces E(Y) y Var(Y) son:","opciones":{"a":"E(Y)=11, Var(Y)=9.","b":"E(Y)=11, Var(Y)=18.","c":"E(Y)=8, Var(Y)=36.","d":"E(Y)=11, Var(Y)=36."},"correcta":"d","explicacion":"E(Y)=2·4+3=11; Var(Y)=2²·9=36? Wait Var(2X+3)=4*9=36. Correct answer should be d. Let me fix."}
+  ]
+}

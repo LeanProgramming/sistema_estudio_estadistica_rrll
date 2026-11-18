@@ -1,0 +1,11 @@
+{
+  "unidad": "VI",
+  "titulo": "Unidad VI - Practica (Probabilidad)",
+  "preguntas": [
+    {"id":1,"pregunta":"Caso: En una fabrica, la probabilidad de que una pieza sea defectuosa es 0,05. Se toman 2 piezas al azar. ¿Cual es la probabilidad de que ambas sean defectuosas (suponiendo independencia)?","opciones":{"a":"0,0025","b":"0,10","c":"0,05","d":"0,95"},"correcta":"a","explicacion":"P(defectuosa)=0,05. Para dos piezas independientes: P(ambas defectuosas)=0,05×0,05=0,0025. Formula: P(A∩B)=P(A)·P(B)."},
+    {"id":2,"pregunta":"Caso: En una urna hay 5 bolillas rojas y 3 azules. Se extrae una bolilla. ¿Cual es la probabilidad de que sea roja?","opciones":{"a":"5/8","b":"3/8","c":"1/8","d":"5/3"},"correcta":"a","explicacion":"Total 8 bolillas, 5 rojas. P(roja)=5/8. Probabilidad clasica: casos favorables/casos posibles."},
+    {"id":3,"pregunta":"Caso: La probabilidad de que llueva mañana es 0,3. La probabilidad de que haya viento dado que llueve es 0,6. ¿Cual es la probabilidad de que llueva y haya viento?","opciones":{"a":"0,18","b":"0,9","c":"0,3","d":"0,6"},"correcta":"a","explicacion":"P(lluvia∩viento)=P(viento|lluvia)·P(lluvia)=0,6×0,3=0,18. Regla de la multiplicacion."},
+    {"id":4,"pregunta":"Caso: Una variable aleatoria X toma valores 1,2,3 con probabilidades 0,2, 0,5 y 0,3 respectivamente. ¿Cual es E(X)?","opciones":{"a":"2,1","b":"2,0","c":"1,5","d":"2,5"},"correcta":"a","explicacion":"E(X)=1·0,2+2·0,5+3·0,3=0,2+1,0+0,9=2,1. Formula: E(X)=Σ x_i·p_i."},
+    {"id":5,"pregunta":"Caso: Con los mismos valores (X:1,2,3 con p:0,2,0,5,0,3), ¿cual es la varianza Var(X)?","opciones":{"a":"0,69","b":"0,89","c":"1,0","d":"0,49"},"correcta":"d","explicacion":"E(X)=2,1. E(X²)=1²·0,2+2²·0,5+3²·0,3=0,2+2,0+2,7=4,9. Var=E(X²)-[E(X)]²=4,9-(2,1)²=4,9-4,41=0,49."}
+  ]
+}

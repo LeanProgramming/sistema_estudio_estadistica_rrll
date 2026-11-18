@@ -1,0 +1,16 @@
+{
+  "unidad": "VII",
+  "titulo": "Unidad VII - Teoria aplicada (Distribuciones)",
+  "preguntas": [
+    {"id":1,"pregunta":"Una variable X ~ Binomial(n=10, p=0,3). ¿Cual es E(X)?","opciones":{"a":"3","b":"7","c":"10","d":"0,3"},"correcta":"a","explicacion":"E(X)=n·p=10·0,3=3."},
+    {"id":2,"pregunta":"Para la misma Binomial(n=10,p=0,3), ¿cual es Var(X)?","opciones":{"a":"2,1","b":"3","c":"0,21","d":"10"},"correcta":"a","explicacion":"Var(X)=n·p·q=10·0,3·0,7=2,1."},
+    {"id":3,"pregunta":"Si X ~ Poisson(μ=4), ¿cual es P(X=0)?","opciones":{"a":"e^-4","b":"4·e^-4","c":"1","d":"0"},"correcta":"a","explicacion":"P(X=0)=e^-μ·μ⁰/0!=e^-4."},
+    {"id":4,"pregunta":"En una Poisson, la media y la varianza son:","opciones":{"a":"μ y σ² (distintas)","b":"μ y μ (iguales)","c":"0 y 1","d":"n y p"},"correcta":"b","explicacion":"En la Poisson, E(X)=Var(X)=μ."},
+    {"id":5,"pregunta":"Si Z ~ N(0,1), ¿cual es P(-1,96 ≤ Z ≤ 1,96)?","opciones":{"a":"0,90","b":"0,95","c":"0,99","d":"0,50"},"correcta":"b","explicacion":"Aproximadamente 0,95 (95% de los datos a ±1,96 σ)."},
+    {"id":6,"pregunta":"Para estandarizar X ~ N(μ,σ), se usa:","opciones":{"a":"Z = (X-μ)/σ","b":"Z = (X-μ)·σ","c":"Z = X/σ","d":"Z = (X-μ)+σ"},"correcta":"a","explicacion":"Z=(X-μ)/σ estandariza a la Normal estandar."},
+    {"id":7,"pregunta":"La distribucion t de Student se aproxima a la Normal cuando:","opciones":{"a":"n es pequeno.","b":"n es grande (gl→∞).","c":"σ es conocida.","d":"La poblacion es asimetrica."},"correcta":"b","explicacion":"Para gl grandes, la t se aproxima a la Normal."},
+    {"id":8,"pregunta":"Si (n-1)s²/σ² ~ χ² con gl=n-1, ¿que distribucion es?","opciones":{"a":"Normal","b":"t de Student","c":"Chi cuadrado","d":"Binomial"},"correcta":"c","explicacion":"Es la distribucion Chi cuadrado."},
+    {"id":9,"pregunta":"La distribucion Chi cuadrado es:","opciones":{"a":"Simetrica.","b":"Asimetrica a la derecha.","c":"Uniforme.","d":"Bimodal."},"correcta":"b","explicacion":"Es asimetrica a la derecha (sesgada positivamente)."},
+    {"id":10,"pregunta":"La aproximacion Normal a la Binomial es valida cuando:","opciones":{"a":"n es pequeno y p cercano a 0,5.","b":"p = 0.","c":"n = 1.","d":"n·p ≥ 5 y n·q ≥ 5."},"correcta":"d","explicacion":"Se requiere n·p y n·q suficientemente grandes."}
+  ]
+}
