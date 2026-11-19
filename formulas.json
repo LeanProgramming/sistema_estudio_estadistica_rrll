@@ -7,32 +7,38 @@
         {
           "nombre": "Tamaño de muestra (poblacion infinita)",
           "formula": "n = \\left(\\frac{Z_{\\alpha/2}\\cdot \\sigma}{E}\\right)^2",
-          "uso": "Calcular n para estimar una media con margen de error E."
+          "uso": "Calcular n para estimar una media con margen de error E.",
+          "descripcion": "n = tamaño de muestra a calcular; Z_(α/2) = valor crítico de la distribución normal para el nivel de confianza elegido (α); σ = desvío estándar poblacional; E = margen de error o tolerancia admitida."
         },
         {
           "nombre": "Tamaño de muestra (poblacion finita)",
           "formula": "n = \\frac{n_0}{1 + \\frac{n_0-1}{N}}",
-          "uso": "Ajuste del tamaño de muestra para poblacion finita N."
+          "uso": "Ajuste del tamaño de muestra para poblacion finita N.",
+          "descripcion": "n = tamaño de muestra ajustado; n₀ = tamaño de muestra inicial (calculado para población infinita); N = tamaño de la población."
         },
         {
           "nombre": "Elemento muestral (muestreo sistematico)",
           "formula": "\\text{ELEMENTO}_i = \\text{ENTERO}[(N)\\cdot(x_{ai}) + 1]",
-          "uso": "Seleccionar elementos de la muestra con numeros aleatorios."
+          "uso": "Seleccionar elementos de la muestra con numeros aleatorios.",
+          "descripcion": "ELEMENTO_i = elemento seleccionado en el paso i; N = tamaño de la población; x_ai = número aleatorio generado en el paso i."
         },
         {
           "nombre": "Progresion (muestreo sistematico)",
           "formula": "p = \\frac{N}{n}",
-          "uso": "Intervalo entre elementos seleccionados."
+          "uso": "Intervalo entre elementos seleccionados.",
+          "descripcion": "p = progresión (intervalo entre elementos seleccionados); N = tamaño de la población; n = tamaño de la muestra."
         },
         {
           "nombre": "Arranque (muestreo sistematico)",
           "formula": "a = \\text{ENTERO}[(p)(x_a) + 1]",
-          "uso": "Primer elemento de la muestra sistematica."
+          "uso": "Primer elemento de la muestra sistematica.",
+          "descripcion": "a = primer elemento seleccionado (arranque); p = progresión; x_a = número aleatorio inicial."
         },
         {
           "nombre": "Tamano de muestra estratificada",
           "formula": "n = \\sum n_h",
-          "uso": "Suma de los tamanos de cada estrato."
+          "uso": "Suma de los tamanos de cada estrato.",
+          "descripcion": "n = tamaño total de la muestra; n_k (o n_h) = tamaño de la muestra del estrato k."
         }
       ]
     },
@@ -42,132 +48,308 @@
         {
           "nombre": "Recta de regresion",
           "formula": "y = a + b\\,x",
-          "uso": "Modelo lineal entre dos variables."
+          "uso": "Modelo lineal entre dos variables.",
+          "descripcion": "y = valor de la variable dependiente; a = intercepto; b = pendiente; x = valor de la variable independiente."
         },
         {
           "nombre": "Pendiente (minimos cuadrados)",
           "formula": "b = \\frac{n\\sum xy - \\sum x\\sum y}{n\\sum x^2 - (\\sum x)^2}",
-          "uso": "Pendiente de la recta de regresion."
+          "uso": "Pendiente de la recta de regresion.",
+          "descripcion": "b = pendiente; n = número de pares de datos; Σxy = suma de productos x·y; Σx, Σy = sumas de x e y; Σx² = suma de los cuadrados de x."
         },
         {
           "nombre": "Intercepto",
           "formula": "a = \\bar{Y} - b\\cdot \\bar{X}",
-          "uso": "Intercepto de la recta de regresion."
+          "uso": "Intercepto de la recta de regresion.",
+          "descripcion": "a = intercepto; Ȳ = media de y; b = pendiente; X̄ = media de x."
         },
         {
           "nombre": "Coeficiente de correlacion",
           "formula": "r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{(n\\sum x^2-(\\sum x)^2)(n\\sum y^2-(\\sum y)^2)}}",
-          "uso": "Mide la relacion lineal entre dos variables."
+          "uso": "Mide la relacion lineal entre dos variables.",
+          "descripcion": "r = coeficiente de correlación lineal; n = número de pares; Σxy, Σx, Σy, Σx², Σy² = sumas correspondientes."
         },
         {
           "nombre": "Coeficiente de determinacion",
           "formula": "R^2 = r^2",
-          "uso": "Proporcion de variacion explicada por el modelo."
+          "uso": "Proporcion de variacion explicada por el modelo.",
+          "descripcion": "R² = coeficiente de determinación; r = coeficiente de correlación lineal."
         },
         {
           "nombre": "Variacion total",
           "formula": "SST = \\sum (y_i - \\bar{y})^2",
-          "uso": "Variacion total de la variable dependiente."
+          "uso": "Variacion total de la variable dependiente.",
+          "descripcion": "SST = suma de cuadrados totales; y_i = valores observados de y; ȳ = media de y."
         },
         {
           "nombre": "Variacion explicada",
           "formula": "SSR = \\sum (\\hat{y}_i - \\bar{y})^2",
-          "uso": "Variacion explicada por la regresion."
+          "uso": "Variacion explicada por la regresion.",
+          "descripcion": "SSR = suma de cuadrados de la regresión; ŷ_i = valores estimados por el modelo; ȳ = media de y."
         },
         {
           "nombre": "Variacion no explicada (residuos)",
           "formula": "SSE = \\sum (y_i - \\hat{y}_i)^2",
-          "uso": "Variacion no explicada (error)."
+          "uso": "Variacion no explicada (error).",
+          "descripcion": "SSE = suma de cuadrados del error (residuos); y_i = valores observados; ŷ_i = valores estimados."
         },
         {
           "nombre": "Descomposicion de la variacion",
           "formula": "SST = SSR + SSE",
-          "uso": "Relacion entre variaciones total, explicada y no explicada."
+          "uso": "Relacion entre variaciones total, explicada y no explicada.",
+          "descripcion": "SST = variación total; SSR = variación explicada por la regresión; SSE = variación no explicada (error)."
         },
         {
           "nombre": "Residuo",
           "formula": "e_i = y_i - \\hat{y}_i",
-          "uso": "Diferencia entre valor observado y predicho."
+          "uso": "Diferencia entre valor observado y predicho.",
+          "descripcion": "e_i = residuo del caso i; y_i = valor observado; ŷ_i = valor estimado por el modelo."
         },
         {
-          "nombre": "Media aritmetica",
+          "nombre": "Media aritmetica (sin agrupar)",
           "formula": "\\bar{x} = \\frac{\\sum x_i}{n}",
-          "uso": "Medida de tendencia central."
+          "uso": "Tendencia central: suma de los datos dividida por n.",
+          "descripcion": "x̄ = media aritmética; x_i = valores de la variable; n = número de datos."
         },
         {
-          "nombre": "Mediana",
+          "nombre": "Mediana (sin agrupar, n impar)",
           "formula": "Me = x_{(n+1)/2}",
-          "uso": "Valor central de los datos ordenados."
+          "uso": "Valor central de los datos ordenados cuando n es impar.",
+          "descripcion": "Me = mediana; x_{(n+1)/2} = valor ubicado en la posición (n+1)/2 de los datos ordenados; n = cantidad de datos."
         },
         {
-          "nombre": "Moda",
-          "formula": "Mo",
-          "uso": "Valor mas frecuente."
+          "nombre": "Mediana (sin agrupar, n par)",
+          "formula": "Me = \\frac{x_{n/2}+x_{n/2+1}}{2}",
+          "uso": "Promedio de los dos valores centrales cuando n es par.",
+          "descripcion": "Me = mediana; x_{n/2} y x_{n/2+1} = los dos valores centrales de los datos ordenados."
         },
         {
-          "nombre": "Cuartiles",
-          "formula": "Q_1, Q_2, Q_3",
-          "uso": "Dividen los datos en cuatro partes iguales."
+          "nombre": "Moda (sin agrupar)",
+          "formula": "Mo = x_i \\text{ con mayor frecuencia}",
+          "uso": "Valor que mas se repite en el conjunto de datos.",
+          "descripcion": "Mo = moda; valor que presenta la mayor frecuencia en el conjunto de datos."
         },
         {
-          "nombre": "Percentiles",
-          "formula": "P_k",
-          "uso": "Dividen los datos en 100 partes iguales."
+          "nombre": "Cuartiles (sin agrupar)",
+          "formula": "Q_k = x_{k(n+1)/4} \\quad ; \\quad k=1,2,3",
+          "uso": "Posicion de los cuartiles en los datos ordenados.",
+          "descripcion": "Q_k = cuartil k-ésimo (k=1,2,3); posición = k·(n+1)/4 en los datos ordenados."
         },
         {
-          "nombre": "Varianza (muestra)",
-          "formula": "s^2 = \\frac{\\sum (x_i-\\bar{x})^2}{n-1}",
-          "uso": "Dispersion de los datos."
+          "nombre": "Percentiles (sin agrupar)",
+          "formula": "P_k = x_{k(n+1)/100}",
+          "uso": "Posicion del percentil k en los datos ordenados.",
+          "descripcion": "P_k = percentil k-ésimo; posición = k·(n+1)/100 en los datos ordenados."
         },
         {
-          "nombre": "Desvio estandar (muestra)",
+          "nombre": "Varianza (sin agrupar)",
+          "formula": "s^2 = \\frac{\\sum (x_i-\\bar{x})^2}{n-1} \\quad ; \\quad \\sigma^2 = \\frac{\\sum (x_i-\\mu)^2}{N}",
+          "uso": "Dispersion respecto a la media (muestral y poblacional).",
+          "descripcion": "s² = varianza muestral; σ² = varianza poblacional; x_i = valores; x̄/μ = media; n/N = cantidad de datos."
+        },
+        {
+          "nombre": "Desvio estandar (sin agrupar)",
           "formula": "s = \\sqrt{s^2}",
-          "uso": "Dispersion en las mismas unidades de la variable."
+          "uso": "Dispersion en las mismas unidades de la variable.",
+          "descripcion": "s = desvío estándar; s² = varianza."
         },
         {
-          "nombre": "Rango",
+          "nombre": "Rango (sin agrupar)",
           "formula": "R = x_{max}-x_{min}",
-          "uso": "Diferencia entre el mayor y menor valor."
+          "uso": "Diferencia entre el mayor y el menor valor.",
+          "descripcion": "R = rango; x_max = mayor valor; x_min = menor valor."
         },
         {
-          "nombre": "Coeficiente de variacion",
+          "nombre": "Coeficiente de variacion (sin agrupar)",
           "formula": "CV = \\frac{s}{\\bar{x}}\\times 100",
-          "uso": "Dispersion relativa."
+          "uso": "Dispersion relativa, permite comparar variables distintas.",
+          "descripcion": "CV = coeficiente de variación; s = desvío estándar; x̄ = media aritmética."
         },
         {
-          "nombre": "Asimetria (skewness)",
+          "nombre": "Asimetria (sin agrupar)",
           "formula": "g_1 = \\frac{\\sum (x_i-\\bar{x})^3/n}{s^3}",
-          "uso": "Medida de forma: simetria de la distribucion."
+          "uso": "Medida de forma: simetria de la distribucion.",
+          "descripcion": "g₁ = coeficiente de asimetría; x_i = valores; x̄ = media; s = desvío estándar; n = cantidad de datos."
         },
         {
-          "nombre": "Curtosis",
+          "nombre": "Curtosis (sin agrupar)",
           "formula": "g_2 = \\frac{\\sum (x_i-\\bar{x})^4/n}{s^4}-3",
-          "uso": "Medida de forma: apuntamiento de la distribucion."
+          "uso": "Medida de forma: apuntamiento de la distribucion.",
+          "descripcion": "g₂ = curtosis; x_i = valores; x̄ = media; s = desvío estándar; n = cantidad de datos."
+        },
+        {
+          "nombre": "Total de datos (agrupacion simple)",
+          "formula": "n = \\sum f_i",
+          "uso": "Suma de las frecuencias absolutas.",
+          "descripcion": "n = total de datos; f_i = frecuencia absoluta del valor i."
+        },
+        {
+          "nombre": "Media aritmetica (agrupacion simple)",
+          "formula": "\\bar{x} = \\frac{\\sum f_i\\,x_i}{n}",
+          "uso": "Cada valor se pondera por su frecuencia absoluta.",
+          "descripcion": "x̄ = media; f_i = frecuencia absoluta; x_i = valor de la variable; n = total de datos."
+        },
+        {
+          "nombre": "Mediana (agrupacion simple)",
+          "formula": "Me = x_i \\text{ tal que } F_i \\geq \\frac{n}{2}",
+          "uso": "Valor cuya frecuencia acumulada alcanza por primera vez n/2.",
+          "descripcion": "Me = mediana; x_i = valor cuya frecuencia acumulada F_i alcanza por primera vez n/2."
+        },
+        {
+          "nombre": "Moda (agrupacion simple)",
+          "formula": "Mo = x_i \\text{ con mayor } f_i",
+          "uso": "Valor de mayor frecuencia absoluta.",
+          "descripcion": "Mo = moda; x_i = valor con la mayor frecuencia absoluta f_i."
+        },
+        {
+          "nombre": "Cuartiles (agrupacion simple)",
+          "formula": "Q_k = x_i \\text{ tal que } F_i \\geq \\frac{k\\,n}{4}",
+          "uso": "Valor cuya frecuencia acumulada alcanza k·n/4.",
+          "descripcion": "Q_k = cuartil k; x_i = valor cuya frecuencia acumulada F_i alcanza k·n/4."
+        },
+        {
+          "nombre": "Percentiles (agrupacion simple)",
+          "formula": "P_k = x_i \\text{ tal que } F_i \\geq \\frac{k\\,n}{100}",
+          "uso": "Valor cuya frecuencia acumulada alcanza k·n/100.",
+          "descripcion": "P_k = percentil k; x_i = valor cuya frecuencia acumulada F_i alcanza k·n/100."
+        },
+        {
+          "nombre": "Varianza (agrupacion simple)",
+          "formula": "s^2 = \\frac{\\sum f_i\\,(x_i-\\bar{x})^2}{n-1}",
+          "uso": "Dispersion ponderada por las frecuencias.",
+          "descripcion": "s² = varianza; f_i = frecuencia; x_i = valor; x̄ = media; n = total de datos."
+        },
+        {
+          "nombre": "Desvio estandar (agrupacion simple)",
+          "formula": "s = \\sqrt{\\frac{\\sum f_i\\,(x_i-\\bar{x})^2}{n-1}}",
+          "uso": "Raiz de la varianza agrupada.",
+          "descripcion": "s = desvío estándar; f_i, x_i, x̄, n = igual que en la varianza."
+        },
+        {
+          "nombre": "Coeficiente de variacion (agrupacion simple)",
+          "formula": "CV = \\frac{s}{\\bar{x}}\\times 100",
+          "uso": "Dispersion relativa para datos agrupados.",
+          "descripcion": "CV = coeficiente de variación; s = desvío estándar; x̄ = media."
+        },
+        {
+          "nombre": "Asimetria (agrupacion simple)",
+          "formula": "g_1 = \\frac{\\sum f_i\\,(x_i-\\bar{x})^3/n}{s^3}",
+          "uso": "Medida de forma ponderada por frecuencias.",
+          "descripcion": "g₁ = asimetría; f_i = frecuencia; x_i = valor; x̄ = media; s = desvío; n = total."
+        },
+        {
+          "nombre": "Curtosis (agrupacion simple)",
+          "formula": "g_2 = \\frac{\\sum f_i\\,(x_i-\\bar{x})^4/n}{s^4}-3",
+          "uso": "Apuntamiento ponderado por frecuencias.",
+          "descripcion": "g₂ = curtosis; f_i, x_i, x̄, s, n = igual que en la asimetría."
+        },
+        {
+          "nombre": "Marca de clase",
+          "formula": "x_i = \\frac{L_i + L_s}{2}",
+          "uso": "Punto medio del intervalo; representa a todos los datos del intervalo.",
+          "descripcion": "x_i = marca de clase (punto medio); L_i = límite inferior del intervalo; L_s = límite superior."
+        },
+        {
+          "nombre": "Amplitud del intervalo",
+          "formula": "A = L_s - L_i",
+          "uso": "Diferencia entre el limite superior e inferior de la clase.",
+          "descripcion": "A = amplitud; L_s = límite superior; L_i = límite inferior del intervalo."
+        },
+        {
+          "nombre": "Media aritmetica (intervalos)",
+          "formula": "\\bar{x} = \\frac{\\sum f_i\\,x_i}{n}",
+          "uso": "Se usan las marcas de clase ponderadas por las frecuencias.",
+          "descripcion": "x̄ = media; f_i = frecuencia; x_i = marca de clase; n = total de datos."
+        },
+        {
+          "nombre": "Mediana (intervalos)",
+          "formula": "Me = L_i + \\frac{\\frac{n}{2}-F_{i-1}}{f_i}\\times A",
+          "uso": "Interpolacion dentro del intervalo que contiene el lugar n/2.",
+          "descripcion": "Me = mediana; L_i = límite inferior de la clase mediana; n = total; F_{i-1} = frecuencia acumulada anterior; f_i = frecuencia de la clase; A = amplitud."
+        },
+        {
+          "nombre": "Moda (intervalos)",
+          "formula": "Mo = L_i + \\frac{f_i-f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\\times A",
+          "uso": "Interpolacion en la clase de mayor frecuencia.",
+          "descripcion": "Mo = moda; L_i = límite inferior de la clase modal; f_i = frecuencia modal; f_{i-1}, f_{i+1} = frecuencias de las clases adyacentes; A = amplitud."
+        },
+        {
+          "nombre": "Cuartiles (intervalos)",
+          "formula": "Q_k = L_i + \\frac{\\frac{k\\,n}{4}-F_{i-1}}{f_i}\\times A",
+          "uso": "Interpolacion en el intervalo que contiene el lugar k·n/4.",
+          "descripcion": "Q_k = cuartil k; L_i = límite inferior; k·n/4 = posición; F_{i-1} = frecuencia acumulada anterior; f_i = frecuencia; A = amplitud."
+        },
+        {
+          "nombre": "Percentiles (intervalos)",
+          "formula": "P_k = L_i + \\frac{\\frac{k\\,n}{100}-F_{i-1}}{f_i}\\times A",
+          "uso": "Interpolacion en el intervalo que contiene el lugar k·n/100.",
+          "descripcion": "P_k = percentil k; L_i, F_{i-1}, f_i, A = igual que cuartiles; k·n/100 = posición."
+        },
+        {
+          "nombre": "Varianza (intervalos)",
+          "formula": "s^2 = \\frac{\\sum f_i\\,(x_i-\\bar{x})^2}{n-1}",
+          "uso": "Se calcula con las marcas de clase.",
+          "descripcion": "s² = varianza; f_i = frecuencia; x_i = marca de clase; x̄ = media; n = total."
+        },
+        {
+          "nombre": "Desvio estandar (intervalos)",
+          "formula": "s = \\sqrt{\\frac{\\sum f_i\\,(x_i-\\bar{x})^2}{n-1}}",
+          "uso": "Raiz de la varianza calculada por intervalos.",
+          "descripcion": "s = desvío estándar; f_i, x_i, x̄, n = igual que en la varianza."
+        },
+        {
+          "nombre": "Rango (intervalos)",
+          "formula": "R = L_s^{(max)} - L_i^{(min)}",
+          "uso": "Diferencia entre el limite superior maximo y el inferior minimo.",
+          "descripcion": "R = rango; L_s^(max) = límite superior máximo; L_i^(min) = límite inferior mínimo."
+        },
+        {
+          "nombre": "Coeficiente de variacion (intervalos)",
+          "formula": "CV = \\frac{s}{\\bar{x}}\\times 100",
+          "uso": "Dispersion relativa calculada por intervalos.",
+          "descripcion": "CV = coeficiente de variación; s = desvío estándar; x̄ = media."
+        },
+        {
+          "nombre": "Asimetria (intervalos)",
+          "formula": "g_1 = \\frac{\\sum f_i\\,(x_i-\\bar{x})^3}{n\\;s^3}",
+          "uso": "Medida de forma usando marcas de clase y frecuencias.",
+          "descripcion": "g₁ = asimetría; f_i = frecuencia; x_i = marca de clase; x̄ = media; s = desvío; n = total."
+        },
+        {
+          "nombre": "Curtosis (intervalos)",
+          "formula": "g_2 = \\frac{\\sum f_i\\,(x_i-\\bar{x})^4}{n\\;s^4}-3",
+          "uso": "Apuntamiento usando marcas de clase y frecuencias.",
+          "descripcion": "g₂ = curtosis; f_i, x_i, x̄, s, n = igual que en la asimetría."
         },
         {
           "nombre": "Modelo parabolico",
           "formula": "Y = a_0 + a_1 X + a_2 X^2",
-          "uso": "Ajuste cuadratico."
+          "uso": "Ajuste cuadratico.",
+          "descripcion": "Y = valor de la variable dependiente; a_0, a_1, a_2 = coeficientes del modelo; X = variable independiente."
         },
         {
           "nombre": "Modelo cubico",
           "formula": "Y = a_0 + a_1 X + a_2 X^2 + a_3 X^3",
-          "uso": "Ajuste cubico."
+          "uso": "Ajuste cubico.",
+          "descripcion": "Y = valor de la variable dependiente; a_0, a_1, a_2, a_3 = coeficientes; X = variable independiente."
         },
         {
           "nombre": "Modelo potencial",
           "formula": "Y = a\\,X^b",
-          "uso": "Ajuste potencial."
+          "uso": "Ajuste potencial.",
+          "descripcion": "Y = valor de la variable dependiente; a, b = coeficientes del modelo; X = variable independiente."
         },
         {
           "nombre": "Modelo exponencial",
           "formula": "Y = a\\,b^X",
-          "uso": "Ajuste exponencial."
+          "uso": "Ajuste exponencial.",
+          "descripcion": "Y = valor de la variable dependiente; a, b = coeficientes del modelo; X = variable independiente."
         },
         {
           "nombre": "Error estandar de estimacion",
           "formula": "S_{y\\cdot x} = \\sqrt{\\frac{\\sum (y_i-\\hat{y}_i)^2}{n-2}}",
-          "uso": "Dispersion de los puntos respecto a la recta."
+          "uso": "Dispersion de los puntos respecto a la recta.",
+          "descripcion": "S_{y·x} = error estándar de estimación; y_i = valores observados; ŷ_i = valores estimados; n = cantidad de datos."
         }
       ]
     },
@@ -177,37 +359,44 @@
         {
           "nombre": "Modelo aditivo",
           "formula": "Y = T + E + C + I",
-          "uso": "Suma de componentes de la serie."
+          "uso": "Suma de componentes de la serie.",
+          "descripcion": "Y = valor de la serie; T = tendencia; E = componente estacional; C = componente cíclico; I (o A) = componente irregular/aleatorio."
         },
         {
           "nombre": "Modelo multiplicativo",
           "formula": "Y = T \\times E \\times C \\times I",
-          "uso": "Producto de componentes de la serie."
+          "uso": "Producto de componentes de la serie.",
+          "descripcion": "Y = valor de la serie; T = tendencia; E = estacional; C = cíclico; I (o A) = irregular (producto de los componentes)."
         },
         {
           "nombre": "Media movil",
           "formula": "\\bar{Y}_t = \\frac{Y_{t-1}+Y_t+Y_{t+1}}{3}",
-          "uso": "Suavizar la serie para identificar la tendencia."
+          "uso": "Suavizar la serie para identificar la tendencia.",
+          "descripcion": "Ȳ_t = media móvil en el período t; Y_{t-1}, Y_t, Y_{t+1} = valores de la serie en periodos consecutivos."
         },
         {
           "nombre": "Tendencia lineal",
           "formula": "Y = a + bX",
-          "uso": "Estimar la tendencia por minimos cuadrados."
+          "uso": "Estimar la tendencia por minimos cuadrados.",
+          "descripcion": "Y = valor de la serie; a = intercepto; b = pendiente; X (o t) = variable tiempo."
         },
         {
           "nombre": "Indice estacional",
           "formula": "I_e = \\frac{\\bar{Y}_{mes}}{\\bar{Y}}",
-          "uso": "Medir la variacion estacional respecto al promedio."
+          "uso": "Medir la variacion estacional respecto al promedio.",
+          "descripcion": "I_e = índice estacional; Ȳ_mes = promedio del mes; Ȳ = promedio general de la serie."
         },
         {
           "nombre": "Error de pronostico",
           "formula": "e_t = Y_t - \\hat{Y}_t",
-          "uso": "Diferencia entre valor real y pronosticado."
+          "uso": "Diferencia entre valor real y pronosticado.",
+          "descripcion": "e_t = error de pronóstico; Y_t = valor real; Ŷ_t = valor pronosticado."
         },
         {
           "nombre": "Coeficiente de ajuste",
           "formula": "\\text{Coef. ajuste} = \\frac{\\sum Y}{\\sum \\hat{Y}}",
-          "uso": "Relacion entre valores reales y ajustados (cercano a 1)."
+          "uso": "Relacion entre valores reales y ajustados (cercano a 1).",
+          "descripcion": "Coef. ajuste = ΣY/ΣŶ; ΣY = suma de valores reales; ΣŶ = suma de valores pronosticados."
         }
       ]
     },
@@ -217,37 +406,44 @@
         {
           "nombre": "Modelo multiplicativo",
           "formula": "Y = T \\times E \\times C \\times A",
-          "uso": "Producto de los componentes de la serie (tendencia, estacional, ciclo, aleatorio)."
+          "uso": "Producto de los componentes de la serie (tendencia, estacional, ciclo, aleatorio).",
+          "descripcion": "Y = valor de la serie; T = tendencia; E = estacional; C = cíclico; I (o A) = irregular (producto de los componentes)."
         },
         {
           "nombre": "Modelo aditivo",
           "formula": "Y = T + E + C + A",
-          "uso": "Suma de los componentes de la serie."
+          "uso": "Suma de los componentes de la serie.",
+          "descripcion": "Y = valor de la serie; T = tendencia; E = componente estacional; C = componente cíclico; I (o A) = componente irregular/aleatorio."
         },
         {
           "nombre": "Tendencia lineal",
           "formula": "Y = a_1 + b_1\\,t",
-          "uso": "Ajuste de la tendencia por minimos cuadrados."
+          "uso": "Ajuste de la tendencia por minimos cuadrados.",
+          "descripcion": "Y = valor de la serie; a = intercepto; b = pendiente; X (o t) = variable tiempo."
         },
         {
           "nombre": "Pronostico por tendencia",
           "formula": "\\hat{Y} = a_1 + b_1\\,t_i",
-          "uso": "Estimar el valor de la serie en un periodo t."
+          "uso": "Estimar el valor de la serie en un periodo t.",
+          "descripcion": "Ŷ = valor pronosticado; a_1, b_1 = coeficientes de la tendencia; t_i = período a pronosticar."
         },
         {
           "nombre": "Proyeccion mensual de la tendencia",
           "formula": "Y_t = a_{12} + b_{12}\\,t_{12} = a_{12} + \\frac{b_{12}}{12}\\,t",
-          "uso": "Expresar la tendencia anual en valores mensuales."
+          "uso": "Expresar la tendencia anual en valores mensuales.",
+          "descripcion": "Y_t = valor mensual; a_12, b_12 = coeficientes anuales de la tendencia; t = período."
         },
         {
           "nombre": "Coeficiente de ajuste",
           "formula": "\\text{Coef. ajuste} = \\frac{\\sum Y}{\\sum \\hat{Y}}",
-          "uso": "Verificar el ajuste del modelo (debe ser cercano a 1)."
+          "uso": "Verificar el ajuste del modelo (debe ser cercano a 1).",
+          "descripcion": "Coef. ajuste = ΣY/ΣŶ; ΣY = suma de valores reales; ΣŶ = suma de valores pronosticados."
         },
         {
           "nombre": "Error de pronostico",
           "formula": "e_t = Y_t - \\hat{Y}_t",
-          "uso": "Diferencia entre el valor real y el pronosticado."
+          "uso": "Diferencia entre el valor real y el pronosticado.",
+          "descripcion": "e_t = error de pronóstico; Y_t = valor real; Ŷ_t = valor pronosticado."
         }
       ]
     },
@@ -257,57 +453,68 @@
         {
           "nombre": "Indice simple",
           "formula": "I = \\frac{P_1}{P_0}\\times 100",
-          "uso": "Comparar un precio actual con el base."
+          "uso": "Comparar un precio actual con el base.",
+          "descripcion": "I = índice simple; P_1 = precio del período actual; P_0 = precio del período base."
         },
         {
           "nombre": "Indice agregativo simple",
           "formula": "I = \\frac{\\sum P_1}{\\sum P_0}\\times 100",
-          "uso": "Indice no ponderado de precios."
+          "uso": "Indice no ponderado de precios.",
+          "descripcion": "I = índice agregativo; ΣP_1 = suma de precios actuales; ΣP_0 = suma de precios base."
         },
         {
           "nombre": "Laspeyres",
           "formula": "L = \\frac{\\sum P_1 Q_0}{\\sum P_0 Q_0}\\times 100",
-          "uso": "Indice ponderado con cantidades base."
+          "uso": "Indice ponderado con cantidades base.",
+          "descripcion": "L = índice de Laspeyres; P_1, P_0 = precios actual y base; Q_0 = cantidades del período base."
         },
         {
           "nombre": "Paasche",
           "formula": "P = \\frac{\\sum P_1 Q_1}{\\sum P_0 Q_1}\\times 100",
-          "uso": "Indice ponderado con cantidades actuales."
+          "uso": "Indice ponderado con cantidades actuales.",
+          "descripcion": "P = índice de Paasche; P_1, P_0 = precios actual y base; Q_1 = cantidades del período actual."
         },
         {
           "nombre": "Fisher",
           "formula": "F = \\sqrt{L\\cdot P}",
-          "uso": "Media geometrica de Laspeyres y Paasche."
+          "uso": "Media geometrica de Laspeyres y Paasche.",
+          "descripcion": "F = índice de Fisher; L = índice de Laspeyres; P = índice de Paasche."
         },
         {
           "nombre": "Variacion porcentual",
           "formula": "\\%\\Delta = \\frac{I_1 - I_0}{I_0}\\times 100",
-          "uso": "Variacion porcentual entre dos periodos."
+          "uso": "Variacion porcentual entre dos periodos.",
+          "descripcion": "%Δ = variación porcentual; I_1, I_0 = índices de los períodos 1 y 0."
         },
         {
           "nombre": "Poder adquisitivo",
           "formula": "PA = \\frac{S}{I_p}",
-          "uso": "Salario nominal dividido por indice de precios."
+          "uso": "Salario nominal dividido por indice de precios.",
+          "descripcion": "PA = poder adquisitivo; S = salario nominal; I_p = índice de precios."
         },
         {
           "nombre": "Indice de valor",
           "formula": "I_V = \\frac{I_P \\cdot I_Q}{100}",
-          "uso": "Producto de indices de precios y cantidad."
+          "uso": "Producto de indices de precios y cantidad.",
+          "descripcion": "I_V = índice de valor; I_P = índice de precios; I_Q = índice de cantidad."
         },
         {
           "nombre": "Variacion (coeficiente)",
           "formula": "V_i = (C_i - 1)\\times 100",
-          "uso": "Variacion porcentual a partir del coeficiente."
+          "uso": "Variacion porcentual a partir del coeficiente.",
+          "descripcion": "V_i = variación; C_i = coeficiente del período i."
         },
         {
           "nombre": "Enlace de indices",
           "formula": "I_{i} = \\frac{I_i}{I_{i-1}}\\times I_{i-1}",
-          "uso": "Encadenar indices de periodos consecutivos."
+          "uso": "Encadenar indices de periodos consecutivos.",
+          "descripcion": "I_i = índice del período i; I_{i-1} = índice del período anterior."
         },
         {
           "nombre": "Actualizacion monetaria",
           "formula": "\\text{Valor real} = \\frac{\\text{Valor nominal}}{\\text{Indice de precios}}\\times 100",
-          "uso": "Expresar valores a precios de un periodo base."
+          "uso": "Expresar valores a precios de un periodo base.",
+          "descripcion": "Valor real = (Valor nominal / Índice de precios) × 100; expresa valores a precios del período base."
         }
       ]
     },
@@ -317,42 +524,50 @@
         {
           "nombre": "Probabilidad condicional",
           "formula": "P(A|B) = \\frac{P(A\\cap B)}{P(B)}",
-          "uso": "Probabilidad de A dado que ocurrio B."
+          "uso": "Probabilidad de A dado que ocurrio B.",
+          "descripcion": "P(A|B) = probabilidad de A dado B; P(A∩B) = probabilidad conjunta; P(B) = probabilidad de B."
         },
         {
           "nombre": "Regla de la adicion",
           "formula": "P(A\\cup B) = P(A)+P(B)-P(A\\cap B)",
-          "uso": "Probabilidad de que ocurra A o B."
+          "uso": "Probabilidad de que ocurra A o B.",
+          "descripcion": "P(A∪B) = probabilidad de A o B; P(A), P(B) = probabilidades individuales; P(A∩B) = conjunta."
         },
         {
           "nombre": "Regla de la multiplicacion",
           "formula": "P(A\\cap B) = P(A)\\cdot P(B|A)",
-          "uso": "Probabilidad conjunta de dos sucesos."
+          "uso": "Probabilidad conjunta de dos sucesos.",
+          "descripcion": "P(A∩B) = probabilidad conjunta; P(A) = probabilidad de A; P(B|A) = probabilidad condicional de B dado A."
         },
         {
           "nombre": "Esperanza matematica",
           "formula": "E(X) = \\sum x_i\\cdot p_i",
-          "uso": "Valor esperado de una variable aleatoria discreta."
+          "uso": "Valor esperado de una variable aleatoria discreta.",
+          "descripcion": "E(X) = esperanza (media); x_i = valores de la variable; p_i = probabilidades."
         },
         {
           "nombre": "Varianza",
           "formula": "\\text{Var}(X) = E(X^2) - [E(X)]^2",
-          "uso": "Dispersion de la variable respecto a su media."
+          "uso": "Dispersion de la variable respecto a su media.",
+          "descripcion": "Var(X) = varianza; E(X²) = esperanza del cuadrado; E(X) = esperanza (media)."
         },
         {
           "nombre": "Suceso complementario",
           "formula": "P(\\bar{A}) = 1 - P(A)",
-          "uso": "Probabilidad de que no ocurra A."
+          "uso": "Probabilidad de que no ocurra A.",
+          "descripcion": "P(Ā) = probabilidad del complemento de A; P(A) = probabilidad de A."
         },
         {
           "nombre": "Probabilidad total",
           "formula": "P(A) = \\sum P(A\\cap B_i)",
-          "uso": "Probabilidad de A a partir de sucesos exhaustivos B_i."
+          "uso": "Probabilidad de A a partir de sucesos exhaustivos B_i.",
+          "descripcion": "P(A) = probabilidad de A; P(A∩B_i) = probabilidad conjunta de A con cada B_i."
         },
         {
           "nombre": "Independencia",
           "formula": "P(A|B) = P(A) \\iff P(A\\cap B)=P(A)P(B)",
-          "uso": "Condicion de independencia de dos sucesos."
+          "uso": "Condicion de independencia de dos sucesos.",
+          "descripcion": "P(A|B)=P(A) condición de independencia; P(A∩B)=P(A)·P(B) equivalente."
         }
       ]
     },
@@ -362,37 +577,44 @@
         {
           "nombre": "Binomial: P(X=k)",
           "formula": "P(X=k)=\\binom{n}{k}\\cdot p^k\\cdot q^{n-k}",
-          "uso": "Probabilidad de k exitos en n ensayos."
+          "uso": "Probabilidad de k exitos en n ensayos.",
+          "descripcion": "P(X=k) = probabilidad de k éxitos; n = número de ensayos; k = éxitos; p = probabilidad de éxito; q = 1−p; C(n,k) = combinaciones."
         },
         {
           "nombre": "Binomial: E y Var",
           "formula": "E(X)=n\\cdot p \\; ; \\; \\text{Var}(X)=n\\cdot p\\cdot q",
-          "uso": "Media y varianza de la Binomial."
+          "uso": "Media y varianza de la Binomial.",
+          "descripcion": "E(X) = n·p = media; Var(X) = n·p·q = varianza; n = ensayos; p = probabilidad de éxito; q = 1−p."
         },
         {
           "nombre": "Poisson: P(X=k)",
           "formula": "P(X=k)=e^{-\\mu}\\cdot \\frac{\\mu^k}{k!}",
-          "uso": "Probabilidad de k eventos en un intervalo."
+          "uso": "Probabilidad de k eventos en un intervalo.",
+          "descripcion": "P(X=k) = probabilidad de k eventos; μ (o λ) = media de eventos en el intervalo; k = eventos; e = base natural; k! = factorial."
         },
         {
           "nombre": "Normal estandar",
           "formula": "Z = \\frac{X-\\mu}{\\sigma}",
-          "uso": "Estandarizar una variable normal."
+          "uso": "Estandarizar una variable normal.",
+          "descripcion": "Z = puntaje estándar; X = valor de la variable; μ = media poblacional; σ = desvío estándar poblacional."
         },
         {
           "nombre": "Hipergeometrica",
           "formula": "P(X=k)=\\frac{\\binom{K}{k}\\binom{N-K}{n-k}}{\\binom{N}{n}}",
-          "uso": "Probabilidad en muestreo sin reposicion."
+          "uso": "Probabilidad en muestreo sin reposicion.",
+          "descripcion": "P(X=k) = probabilidad; N = tamaño de la población; K = éxitos en la población; n = tamaño de la muestra; k = éxitos en la muestra."
         },
         {
           "nombre": "Poisson: media y varianza",
           "formula": "E(X)=\\text{Var}(X)=\\mu",
-          "uso": "Media igual a la varianza en la Poisson."
+          "uso": "Media igual a la varianza en la Poisson.",
+          "descripcion": "E(X) = Var(X) = μ; en la Poisson la media es igual a la varianza."
         },
         {
           "nombre": "Poisson: parametro",
           "formula": "\\lambda = n\\cdot p",
-          "uso": "Aproximacion de la Binomial a la Poisson."
+          "uso": "Aproximacion de la Binomial a la Poisson.",
+          "descripcion": "λ = n·p; n = número de ensayos; p = probabilidad de éxito (aproximación de la Binomial)."
         }
       ]
     },
@@ -402,82 +624,98 @@
         {
           "nombre": "Total de muestras con reposicion",
           "formula": "M = N^n",
-          "uso": "Cantidad de muestras de tamano n que pueden extraerse de una poblacion N con reposicion."
+          "uso": "Cantidad de muestras de tamano n que pueden extraerse de una poblacion N con reposicion.",
+          "descripcion": "M = cantidad de muestras posibles; N = tamaño de la población; n = tamaño de la muestra."
         },
         {
           "nombre": "Total de muestras sin reposicion",
           "formula": "M = \\binom{N}{n} = \\frac{N!}{n!\\,(N-n)!}",
-          "uso": "Cantidad de muestras de tamano n sin reposicion (poblacion finita)."
+          "uso": "Cantidad de muestras de tamano n sin reposicion (poblacion finita).",
+          "descripcion": "M = cantidad de muestras posibles; N = tamaño de la población; n = tamaño de la muestra (combinaciones)."
         },
         {
           "nombre": "Media de la distribucion muestral de medias",
           "formula": "E(\\bar{x}) = \\mu_{\\bar{x}} = \\mu_x",
-          "uso": "La media de las medias muestrales es igual a la media poblacional."
+          "uso": "La media de las medias muestrales es igual a la media poblacional.",
+          "descripcion": "E(x̄) = μ_x̄ = μ_x; μ_x = media poblacional de la variable x."
         },
         {
           "nombre": "Varianza de la media muestral (con reposicion)",
           "formula": "V(\\bar{x}) = \\sigma_{\\bar{x}}^2 = \\frac{\\sigma_x^2}{n}",
-          "uso": "Dispersion de las medias muestrales en poblaciones infinitas."
+          "uso": "Dispersion de las medias muestrales en poblaciones infinitas.",
+          "descripcion": "V(x̄) = σ_x̄²; σ_x² = varianza poblacional; n = tamaño de la muestra."
         },
         {
           "nombre": "Error estandar de la media (con reposicion)",
           "formula": "\\sigma_{\\bar{x}} = \\frac{\\sigma_x}{\\sqrt{n}}",
-          "uso": "Desvio estandar de la distribucion muestral de medias."
+          "uso": "Desvio estandar de la distribucion muestral de medias.",
+          "descripcion": "σ_x̄ = error estándar; σ_x = desvío estándar poblacional; n = tamaño de la muestra."
         },
         {
           "nombre": "Varianza de la media muestral (sin reposicion)",
           "formula": "V(\\bar{x}) = \\frac{\\sigma_x^2}{n}\\cdot\\frac{N-n}{N-1}",
-          "uso": "Dispersion de las medias en poblaciones finitas."
+          "uso": "Dispersion de las medias en poblaciones finitas.",
+          "descripcion": "V(x̄) = varianza; σ_x² = varianza poblacional; n = tamaño de muestra; N = tamaño de población."
         },
         {
           "nombre": "Error estandar de la media (sin reposicion)",
           "formula": "\\sigma_{\\bar{x}} = \\frac{\\sigma_x}{\\sqrt{n}}\\cdot\\sqrt{\\frac{N-n}{N-1}}",
-          "uso": "Con factor de correccion para poblaciones finitas."
+          "uso": "Con factor de correccion para poblaciones finitas.",
+          "descripcion": "σ_x̄ = error estándar; σ_x = desvío; n = tamaño de muestra; N = tamaño de población."
         },
         {
           "nombre": "Factor de correccion (poblaciones finitas)",
           "formula": "\\sqrt{\\frac{N-n}{N-1}}",
-          "uso": "Corrige el error estandar cuando el muestreo es sin reposicion."
+          "uso": "Corrige el error estandar cuando el muestreo es sin reposicion.",
+          "descripcion": "√((N−n)/(N−1)) = factor de corrección para poblaciones finitas; N = población; n = muestra."
         },
         {
           "nombre": "Media de la proporcion muestral",
           "formula": "E(h_i) = \\mu_h = p",
-          "uso": "La proporcion muestral es insesgada respecto de p."
+          "uso": "La proporcion muestral es insesgada respecto de p.",
+          "descripcion": "E(h_i) = μ_h; p = proporción poblacional (probabilidad de éxito)."
         },
         {
           "nombre": "Varianza de la proporcion muestral (con reposicion)",
           "formula": "V(h_i) = \\sigma_h^2 = \\frac{p\\,q}{n}",
-          "uso": "Dispersion de las proporciones muestrales."
+          "uso": "Dispersion de las proporciones muestrales.",
+          "descripcion": "V(h_i) = σ_h²; p = probabilidad de éxito; q = 1−p; n = tamaño de muestra."
         },
         {
           "nombre": "Error estandar de la proporcion",
           "formula": "\\sigma_h = \\sqrt{\\frac{p\\,q}{n}}",
-          "uso": "Desvio estandar de la distribucion muestral de proporciones."
+          "uso": "Desvio estandar de la distribucion muestral de proporciones.",
+          "descripcion": "σ_h = desvío estándar; p = probabilidad de éxito; q = 1−p; n = tamaño de muestra."
         },
         {
           "nombre": "Varianza de la proporcion (sin reposicion)",
           "formula": "V(h_i) = \\frac{p\\,q}{n}\\cdot\\frac{N-n}{N-1}",
-          "uso": "Para poblaciones finitas o muestreo sin reposicion."
+          "uso": "Para poblaciones finitas o muestreo sin reposicion.",
+          "descripcion": "V(h_i) = varianza; p, q = probabilidades; n = tamaño de muestra; N = tamaño de población."
         },
         {
           "nombre": "Estandarizacion de la media muestral",
           "formula": "z = \\frac{\\bar{x}-\\mu_x}{\\sigma_x/\\sqrt{n}}",
-          "uso": "Permite usar la tabla normal para calcular probabilidades de la media muestral."
+          "uso": "Permite usar la tabla normal para calcular probabilidades de la media muestral.",
+          "descripcion": "z = puntaje estándar; x̄ = media muestral; μ_x = media poblacional; σ_x = desvío poblacional; n = tamaño de muestra."
         },
         {
           "nombre": "Intervalo central de las medias",
           "formula": "\\bar{x} \\pm z\\cdot\\frac{\\sigma_x}{\\sqrt{n}}",
-          "uso": "Valores entre los que se encuentra un porcentaje dado de las medias muestrales."
+          "uso": "Valores entre los que se encuentra un porcentaje dado de las medias muestrales.",
+          "descripcion": "x̄ ± z·σ_x/√n; x̄ = media muestral; z = valor de la normal; σ_x = desvío; n = tamaño."
         },
         {
           "nombre": "Esperanza del desvio estandar muestral",
           "formula": "E(S_x) = \\mu_{S_x} = \\sigma_x",
-          "uso": "El desvio estandar muestral estima el desvio poblacional."
+          "uso": "El desvio estandar muestral estima el desvio poblacional.",
+          "descripcion": "E(S_x) = μ_{S_x}; σ_x = desvío estándar poblacional."
         },
         {
           "nombre": "Varianza del desvio estandar muestral",
           "formula": "V(S_x) = \\sigma_{S_x}^2 = \\frac{\\sigma_x^2}{2n}",
-          "uso": "Dispersion del desvio estandar muestral para muestras grandes."
+          "uso": "Dispersion del desvio estandar muestral para muestras grandes.",
+          "descripcion": "V(S_x) = σ_{S_x}²; σ_x = desvío poblacional; n = tamaño de muestra."
         }
       ]
     },
@@ -487,102 +725,122 @@
         {
           "nombre": "Estimador puntual de la media",
           "formula": "\\hat{\\mu}_x = \\bar{x}",
-          "uso": "La media muestral estima la media poblacional."
+          "uso": "La media muestral estima la media poblacional.",
+          "descripcion": "μ̂_x = estimador puntual; x̄ = media muestral."
         },
         {
           "nombre": "Estimador puntual de la proporcion",
           "formula": "\\hat{p} = h_i",
-          "uso": "La proporcion muestral estima la proporcion poblacional."
+          "uso": "La proporcion muestral estima la proporcion poblacional.",
+          "descripcion": "p̂ = estimador puntual; h_i = proporción muestral."
         },
         {
           "nombre": "Estimador puntual de la varianza",
           "formula": "\\hat{\\sigma}_x^2 = S_x^2",
-          "uso": "La varianza muestral estima la varianza poblacional."
+          "uso": "La varianza muestral estima la varianza poblacional.",
+          "descripcion": "σ̂_x² = estimador puntual; S_x² = varianza muestral."
         },
         {
           "nombre": "Esperanza de la media muestral",
           "formula": "E(\\bar{x}) = \\mu_x",
-          "uso": "Demuestra que la media muestral es un estimador insesgado."
+          "uso": "Demuestra que la media muestral es un estimador insesgado.",
+          "descripcion": "E(x̄) = μ_x; demuestra que la media muestral es un estimador insesgado."
         },
         {
           "nombre": "Esperanza de la varianza muestral",
           "formula": "E(S_x^2) = \\frac{n-1}{n}\\,\\sigma_x^2",
-          "uso": "Muestra que S_x² es un estimador viciado (sesgado)."
+          "uso": "Muestra que S_x² es un estimador viciado (sesgado).",
+          "descripcion": "E(S_x²) = ((n−1)/n)·σ_x²; n = tamaño de muestra; σ_x² = varianza poblacional."
         },
         {
           "nombre": "Varianza corregida",
           "formula": "S_c^2 = \\frac{1}{n-1}\\sum (x_i-\\bar{x})^2",
-          "uso": "Estimador insesgado de la varianza poblacional."
+          "uso": "Estimador insesgado de la varianza poblacional.",
+          "descripcion": "S_c² = varianza corregida (insesgada); x_i = valores; x̄ = media muestral; n = tamaño."
         },
         {
           "nombre": "Relacion entre varianzas",
           "formula": "S_c^2 = \\frac{n}{n-1}\\,S_x^2",
-          "uso": "Correccion del vicio de la varianza muestral."
+          "uso": "Correccion del vicio de la varianza muestral.",
+          "descripcion": "S_c² = (n/(n−1))·S_x²; n = tamaño de muestra."
         },
         {
           "nombre": "Estandarizacion de la media",
           "formula": "z_i = \\frac{\\bar{x}-\\mu_x}{\\sigma_x/\\sqrt{n}}",
-          "uso": "Variable normal estandar usada para construir el intervalo."
+          "uso": "Variable normal estandar usada para construir el intervalo.",
+          "descripcion": "z_i = puntaje estándar; x̄ = media muestral; μ_x = media poblacional; σ_x = desvío; n = tamaño."
         },
         {
           "nombre": "Intervalo de confianza para la media",
           "formula": "\\bar{x}-z_1\\frac{S_x}{\\sqrt{n}} \\leq \\mu_x \\leq \\bar{x}+z_1\\frac{S_x}{\\sqrt{n}}",
-          "uso": "Estimacion por intervalos de la media (muestras grandes)."
+          "uso": "Estimacion por intervalos de la media (muestras grandes).",
+          "descripcion": "x̄ ± z_1·S_x/√n; x̄ = media muestral; z_1 = valor crítico normal; S_x = desvío muestral; n = tamaño."
         },
         {
           "nombre": "Intervalo de confianza para la proporcion",
           "formula": "h_i-z_1\\sqrt{\\frac{h_i(1-h_i)}{n}} \\leq p \\leq h_i+z_1\\sqrt{\\frac{h_i(1-h_i)}{n}}",
-          "uso": "Estimacion por intervalos de una proporcion (muestras grandes)."
+          "uso": "Estimacion por intervalos de una proporcion (muestras grandes).",
+          "descripcion": "h_i ± z_1·√(h_i(1−h_i)/n); h_i = proporción muestral; z_1 = valor crítico; n = tamaño."
         },
         {
           "nombre": "Intervalo de confianza para el desvio estandar",
           "formula": "S_x-z_1\\frac{S_x}{\\sqrt{2n}} \\leq \\sigma_x \\leq S_x+z_1\\frac{S_x}{\\sqrt{2n}}",
-          "uso": "Estimacion por intervalos del desvio estandar poblacional."
+          "uso": "Estimacion por intervalos del desvio estandar poblacional.",
+          "descripcion": "S_x ± z_1·S_x/√(2n); S_x = desvío muestral; z_1 = valor crítico; n = tamaño."
         },
         {
           "nombre": "Intervalo de confianza para la varianza",
           "formula": "\\left(S_x-z_1\\frac{S_x}{\\sqrt{2n}}\\right)^2 \\leq \\sigma_x^2 \\leq \\left(S_x+z_1\\frac{S_x}{\\sqrt{2n}}\\right)^2",
-          "uso": "Se obtiene elevando al cuadrado los limites del desvio."
+          "uso": "Se obtiene elevando al cuadrado los limites del desvio.",
+          "descripcion": "cuadrado de los límites del intervalo del desvío estándar; S_x = desvío muestral; z_1 = valor crítico; n = tamaño."
         },
         {
           "nombre": "Estadistico t de Student",
           "formula": "t = \\frac{\\bar{x}-\\mu_x}{S_c/\\sqrt{n}}",
-          "uso": "Estandarizacion para muestras pequenas (n <= 30)."
+          "uso": "Estandarizacion para muestras pequenas (n <= 30).",
+          "descripcion": "t = estadístico; x̄ = media muestral; μ_x = media poblacional; S_c = desvío corregido; n = tamaño."
         },
         {
           "nombre": "Grados de libertad",
           "formula": "v = n-1",
-          "uso": "Parametro de la distribucion t y chi cuadrado."
+          "uso": "Parametro de la distribucion t y chi cuadrado.",
+          "descripcion": "v = grados de libertad; n = tamaño de la muestra."
         },
         {
           "nombre": "Intervalo de confianza para la media (muestras pequenas)",
           "formula": "\\bar{x}-t_1\\frac{S_c}{\\sqrt{n}} \\leq \\mu_x \\leq \\bar{x}+t_1\\frac{S_c}{\\sqrt{n}}",
-          "uso": "Intervalo con t de Student cuando n <= 30."
+          "uso": "Intervalo con t de Student cuando n <= 30.",
+          "descripcion": "x̄ ± t_1·S_c/√n; x̄ = media; t_1 = valor crítico de Student; S_c = desvío corregido; n = tamaño."
         },
         {
           "nombre": "Intervalo de confianza para la varianza (chi cuadrado)",
           "formula": "\\frac{n\\,S_x^2}{\\chi_1^2} \\leq \\sigma_x^2 \\leq \\frac{n\\,S_x^2}{\\chi_2^2}",
-          "uso": "Intervalo para la varianza usando chi cuadrado."
+          "uso": "Intervalo para la varianza usando chi cuadrado.",
+          "descripcion": "n·S_x²/χ²_1 ≤ σ_x² ≤ n·S_x²/χ²_2; n = tamaño; S_x² = varianza muestral; χ²_1, χ²_2 = valores críticos de chi cuadrado."
         },
         {
           "nombre": "Tamano de muestra (poblacion infinita)",
           "formula": "n = \\frac{z_1^2\\,\\sigma_x^2}{d^2}",
-          "uso": "Tamano necesario para estimar la media con margen de error d."
+          "uso": "Tamano necesario para estimar la media con margen de error d.",
+          "descripcion": "n = tamaño de muestra; z_1 = valor crítico normal; σ_x = desvío estándar; d = margen de error (tolerancia)."
         },
         {
           "nombre": "Tamano de muestra (poblacion finita)",
           "formula": "n = \\frac{N\\,z_1^2\\,\\sigma_x^2}{d^2(N-1)+z_1^2\\,\\sigma_x^2}",
-          "uso": "Tamano de muestra para poblaciones finitas o sin reposicion."
+          "uso": "Tamano de muestra para poblaciones finitas o sin reposicion.",
+          "descripcion": "n = tamaño de muestra; N = tamaño de la población; z_1 = valor crítico; σ_x = desvío; d = margen de error."
         },
         {
           "nombre": "Margen de error (tolerancia)",
           "formula": "d = z_1\\frac{\\sigma_x}{\\sqrt{n}}",
-          "uso": "Error maximo admitido en la estimacion de la media."
+          "uso": "Error maximo admitido en la estimacion de la media.",
+          "descripcion": "d = margen de error; z_1 = valor crítico normal; σ_x = desvío estándar; n = tamaño de muestra."
         },
         {
           "nombre": "Tolerancia relativa",
           "formula": "d_{rel} = \\frac{d}{\\bar{x}}\\times 100",
-          "uso": "Margen de error expresado como porcentaje de la media."
+          "uso": "Margen de error expresado como porcentaje de la media.",
+          "descripcion": "d_rel = tolerancia relativa (porcentaje); d = margen de error; x̄ = media aritmética."
         }
       ]
     },
@@ -592,72 +850,86 @@
         {
           "nombre": "Hipotesis nula y alternativa (unilateral derecha)",
           "formula": "H_0:\\ \\mu_x \\leq \\mu_0 \\quad ; \\quad H_1:\\ \\mu_x > \\mu_0",
-          "uso": "Planteo cuando se sospecha que la media supera un valor."
+          "uso": "Planteo cuando se sospecha que la media supera un valor.",
+          "descripcion": "H_0: μ_x ≤ μ_0 (hipótesis nula); H_1: μ_x > μ_0 (hipótesis alternativa); μ_x = media muestral; μ_0 = valor hipotético."
         },
         {
           "nombre": "Hipotesis nula y alternativa (unilateral izquierda)",
           "formula": "H_0:\\ \\mu_x \\geq \\mu_0 \\quad ; \\quad H_1:\\ \\mu_x < \\mu_0",
-          "uso": "Planteo cuando se sospecha que la media es menor."
+          "uso": "Planteo cuando se sospecha que la media es menor.",
+          "descripcion": "H_0: μ_x ≥ μ_0; H_1: μ_x < μ_0; μ_x = media muestral; μ_0 = valor hipotético."
         },
         {
           "nombre": "Hipotesis nula y alternativa (bilateral)",
           "formula": "H_0:\\ \\mu_x = \\mu_0 \\quad ; \\quad H_1:\\ \\mu_x \\neq \\mu_0",
-          "uso": "Planteo cuando se busca detectar cualquier diferencia."
+          "uso": "Planteo cuando se busca detectar cualquier diferencia.",
+          "descripcion": "H_0: μ_x = μ_0; H_1: μ_x ≠ μ_0; μ_x = media muestral; μ_0 = valor hipotético."
         },
         {
           "nombre": "Error de tipo I",
           "formula": "\\alpha = P(eI) = P(\\text{rechazar } H_0 \\mid H_0 \\text{ cierta})",
-          "uso": "Nivel de significacion de la prueba."
+          "uso": "Nivel de significacion de la prueba.",
+          "descripcion": "α = probabilidad de error tipo I; P(eI) = probabilidad de rechazar H_0 siendo verdadera (nivel de significación)."
         },
         {
           "nombre": "Error de tipo II",
           "formula": "\\beta = P(eII) = P(\\text{no rechazar } H_0 \\mid H_0 \\text{ falsa})",
-          "uso": "Riesgo de no detectar una diferencia real."
+          "uso": "Riesgo de no detectar una diferencia real.",
+          "descripcion": "β = probabilidad de error tipo II; P(eII) = probabilidad de no rechazar H_0 siendo falsa."
         },
         {
           "nombre": "Poder de la prueba",
           "formula": "\\text{Potencia} = 1-\\beta",
-          "uso": "Probabilidad de rechazar H0 cuando es falsa."
+          "uso": "Probabilidad de rechazar H0 cuando es falsa.",
+          "descripcion": "Potencia = 1−β; β = probabilidad de error tipo II."
         },
         {
           "nombre": "Relacion nivel de confianza - significacion",
           "formula": "NC + \\alpha = 1",
-          "uso": "NC de estimacion y alfa de decision son complementarios."
+          "uso": "NC de estimacion y alfa de decision son complementarios.",
+          "descripcion": "NC = nivel de confianza (estimación); α = nivel de significación (decisión); NC + α = 1."
         },
         {
           "nombre": "Estadistico de prueba Z (media)",
           "formula": "z_1 = \\frac{\\bar{x}-\\mu_0}{S_x/\\sqrt{n}}",
-          "uso": "Prueba de hipotesis para la media con n > 30."
+          "uso": "Prueba de hipotesis para la media con n > 30.",
+          "descripcion": "z_1 = estadístico de prueba; x̄ = media muestral; μ_0 = valor hipotético; S_x = desvío muestral; n = tamaño."
         },
         {
           "nombre": "Estadistico de prueba t (media)",
           "formula": "t_1 = \\frac{\\bar{x}-\\mu_0}{S_c/\\sqrt{n}}",
-          "uso": "Prueba para la media con n <= 30 y desvio desconocido."
+          "uso": "Prueba para la media con n <= 30 y desvio desconocido.",
+          "descripcion": "t_1 = estadístico de prueba; x̄ = media muestral; μ_0 = valor hipotético; S_c = desvío corregido; n = tamaño."
         },
         {
           "nombre": "Estadistico de prueba Z (proporcion)",
           "formula": "z_1 = \\frac{h_i-p_0}{\\sqrt{\\dfrac{p_0(1-p_0)}{n}}}",
-          "uso": "Prueba de hipotesis para una proporcion (n > 30, np y nq >= 5)."
+          "uso": "Prueba de hipotesis para una proporcion (n > 30, np y nq >= 5).",
+          "descripcion": "z_1 = estadístico; h_i = proporción muestral; p_0 = proporción hipotética; n = tamaño."
         },
         {
           "nombre": "Estadistico de prueba Chi cuadrado (varianza)",
           "formula": "\\chi^2 = \\frac{n\\,S_x^2}{\\sigma_0^2}",
-          "uso": "Prueba de hipotesis para la varianza (n <= 30)."
+          "uso": "Prueba de hipotesis para la varianza (n <= 30).",
+          "descripcion": "χ² = estadístico; n = tamaño; S_x² = varianza muestral; σ_0² = varianza hipotética."
         },
         {
           "nombre": "Regla de decision",
           "formula": "|z_1| > |z_c| \\Rightarrow \\text{rechazar } H_0",
-          "uso": "Comparar el estadistico calculado con el valor critico."
+          "uso": "Comparar el estadistico calculado con el valor critico.",
+          "descripcion": "|z_1| > |z_c| → rechazar H_0; z_1 = estadístico calculado; z_c = valor crítico."
         },
         {
           "nombre": "Tamano de muestra para prueba de hipotesis",
           "formula": "n = \\frac{(z_0+z_1)^2\\,\\sigma^2}{(\\mu_1-\\mu_0)^2}",
-          "uso": "n minimo para detectar una diferencia entre medias."
+          "uso": "n minimo para detectar una diferencia entre medias.",
+          "descripcion": "n = tamaño de muestra; z_0 = valor crítico de α; z_1 = valor asociado a β; σ = desvío; μ_1, μ_0 = medias a comparar."
         },
         {
           "nombre": "Valores criticos usuales (Z)",
           "formula": "z_{0,01}=2,33 \\ ; \\ z_{0,05}=1,645 \\ ; \\ z_{0,025}=1,96",
-          "uso": "Valores de tabla para los niveles de significacion mas usados."
+          "uso": "Valores de tabla para los niveles de significacion mas usados.",
+          "descripcion": "z_{0.01}=2.33, z_{0.05}=1.645, z_{0.025}=1.96 = valores críticos de la normal para niveles de significación usuales."
         }
       ]
     }

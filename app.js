@@ -16,6 +16,11 @@ const grupos = [
     {id:"7a", nombre:"Unidad VII - Teoria aplicada", archivo:"preguntero_unidad_7_teoria_aplicada.json"}
   ]},
   {titulo:"Preguntas de practica", items:[
+    {id:"1b", nombre:"Unidad I - Practica", archivo:"preguntero_unidad_1_practica.json"},
+    {id:"2b", nombre:"Unidad II - Practica", archivo:"preguntero_unidad_2_practica.json"},
+    {id:"3b", nombre:"Unidad III - Practica", archivo:"preguntero_unidad_3_practica.json"},
+    {id:"4b", nombre:"Unidad IV - Practica", archivo:"preguntero_unidad_4_practica.json"},
+    {id:"5b", nombre:"Unidad V - Practica", archivo:"preguntero_unidad_5_practica.json"},
     {id:"6b", nombre:"Unidad VI - Practica", archivo:"preguntero_unidad_6_practica.json"},
     {id:"7b", nombre:"Unidad VII - Practica", archivo:"preguntero_unidad_7_practica.json"}
   ]},
@@ -61,6 +66,19 @@ function mostrarMenu(){
 
 let filtroFormula=null;
 
+function renderTextoLatex(texto){
+  if (typeof katex === 'undefined') return texto;
+  const partes = String(texto).split(/(\$[^$]+\$)/g);
+  return partes.map(p => {
+    if (p.startsWith('$') && p.endsWith('$') && p.length > 2) {
+      const tex = p.slice(1, -1);
+      try { return katex.renderToString(tex, {throwOnError:false, displayMode:false}); }
+      catch(e){ return p; }
+    }
+    return p.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }).join('');
+}
+
 async function cargarUnidad(u){
   const r=await fetch(u.archivo);
   data=await r.json();
@@ -88,6 +106,7 @@ function renderFormulas(){
       try{rendered=katex.renderToString(f.formula,{throwOnError:false,displayMode:true});}catch(e){rendered=f.formula;}
       html+='<div class="formula">'+rendered+'</div>';
       html+='<div style="font-size:14px;color:#555">'+f.uso+'</div>';
+      if(f.descripcion){ html+='<div style="font-size:13px;color:#333;margin-top:6px;padding:6px;background:#f7f7f7;border-radius:4px"><strong>Significado de cada símbolo:</strong> '+renderTextoLatex(f.descripcion)+'</div>'; }
       html+='</div>';
     });
   });
@@ -108,7 +127,7 @@ function verTodas(){
       html+='<button class="'+cls+'" disabled style="cursor:default">'+k.toUpperCase()+') '+p.opciones[k]+'</button>';
     }
     html+='</div>';
-    html+='<div class="exp"><strong>Respuesta correcta: '+p.correcta.toUpperCase()+'.</strong> '+p.explicacion+'</div>';
+    html+='<div class="exp"><strong>Respuesta correcta: '+p.correcta.toUpperCase()+'.</strong> '+renderTextoLatex(p.explicacion)+'</div>';
     html+='</div>';
   });
   html+='<button class="back" onclick="mostrarMenu()">Volver al inicio</button>';
@@ -170,7 +189,7 @@ function responder(k){
   });
   const exp=document.getElementById('exp');
   const ok = k===actual.correcta;
-  exp.innerHTML='<div class="exp"><strong>'+(ok?'¡Correcto!':'Incorrecto.')+'</strong> '+actual.explicacion+'</div>';
+  exp.innerHTML='<div class="exp"><strong>'+(ok?'¡Correcto!':'Incorrecto.')+'</strong> '+renderTextoLatex(actual.explicacion)+'</div>';
   const btn=document.getElementById('btnSig');
   if(btn){btn.disabled=false;btn.style.opacity='1';btn.style.cursor='pointer';}
 }
